@@ -13,8 +13,9 @@ def play_game():
     else:
         print('Wrong - I was thinking of ' + secret_animal)
 
-    if input('play again? Type "yes" to continue or press enter to quit '):
+    if input('Play again? Type "yes" to continue or press enter to quit: '):
         start()
+
 
 def main():
     start()

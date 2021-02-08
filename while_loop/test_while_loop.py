@@ -12,8 +12,8 @@ class TestGuess(unittest.TestCase):
         while_loop.play_game()
         mock_print.assert_called_with('Correct!')
 
-    """ No recursion error. Can test the play_game method. Need to use a lot of mock methods 
-    to force a specific choice, and check the printed value """
+    # No recursion error. Can test the play_game method. 
+    # Need to use a lot of mock methods to force a specific choice, and check the printed value
 
 
 if __name__ == '__main__':
