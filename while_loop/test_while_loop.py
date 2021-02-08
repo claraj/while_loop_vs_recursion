@@ -16,5 +16,13 @@ class TestGuess(unittest.TestCase):
     # Need to use a lot of mock methods to force a specific choice, and check the printed value
 
 
+    @patch('builtins.input', side_effect=['fish'])  # used to provide pretend user input
+    @patch('random.choice', return_value='cat')   # force a result from the random choice 
+    @patch('builtins.print')   # fake print function, remembers what it was called with 
+    def test_play_game_user_guesses_incorrectly(self, mock_print, mock_random, mock_input):
+        while_loop.play_game()
+        mock_print.assert_called_with('Wrong - I was thinking of cat')
+
+    
 if __name__ == '__main__':
     unittest.main()

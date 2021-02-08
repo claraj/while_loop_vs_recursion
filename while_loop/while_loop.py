@@ -14,7 +14,7 @@ def play_game():
     if guess == secret_animal:
         print('Correct!')
     else:
-        print('Wrong - I was thinking of ' + secret_animal, guess)
+        print('Wrong - I was thinking of ' + secret_animal)
 
 
 def main():
